@@ -20,12 +20,16 @@ int main() {
 	char name[35];
 	stack *p = new stack();//new返回指针
 	double money;
+	Item	tmp;
 	//如何做到读入空行结束？看cin缓冲区
-	Item tmp;//用tmp = {}会错
+//	Item tmp;//用tmp = {}会错
 	cout << "Enter the name\n";
 	cin >> tmp.fullname;
 	cout << "Enter the money\n";
 	cin >> tmp.payment;
+	//name是指针 指向字符串首地址 所以*name只有1个 
+ //Item	tmp = {"asas", money};//数组成为参数的时候 变为指针
+ //cout << tmp.fullname << " " << tmp.payment << endl;
 	p -> push(tmp);
 	char x;
 	while (cin)
